@@ -1,13 +1,13 @@
 body {
   margin: 10vh auto;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 section {
   margin: 3vh;
   display: grid;
   grid-gap: 5vh;
-  grid-template-columns: repeat(auto-fill, minmax(25vh, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20vh, 1fr));
 }
 
 .product-item-box {
