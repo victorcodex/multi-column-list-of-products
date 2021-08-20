@@ -1,15 +1,34 @@
 body {
-  margin: 10vh auto;
-  max-width: 800px;
+  margin: 2vh auto;
+  max-width: 80vh;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section {
-  margin: 3vh;
-  display: grid;
-  grid-gap: 5vh;
-  grid-template-columns: repeat(auto-fill, minmax(20vh, 1fr));
+  margin-bottom: 5vh;
+  width: calc(50% - 1vw);
+  text-align: center;
 }
 
-.product-item-box {
-  width: 100vh;
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 4vh;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+} 
+
+@media screen and (min-width: 800px) {
+  section {
+    width: calc(40% - 6vh);
+  }
 }
