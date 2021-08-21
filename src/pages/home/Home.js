@@ -12,74 +12,83 @@ function App() {
 
   // filter products by brand
   const filterProductsByBrand = productBrand => {
+    setFilterByTypeKeyword("");
+    setFilterByBrandKeyword(productBrand);
     setProducts(productlist.filter(product => product.brand === productBrand));
-    console.log("e.target.value ", productBrand);
   }
 
   // filter products by brand
   const filterProductsByType = productType => {
+    setFilterByBrandKeyword("");
+    setFilterByTypeKeyword(productType);
     setProducts(productlist.filter(product => product.type === productType));
-    console.log("filterProductsByType ", productType);
   }
 
-  // get unique products by e.g brand
+  // get unique products and count by e.g brand
   const getUniqueProducts = keyName => {
-    return productlist.filter((productA, index) => productlist.findIndex(productB => productA[keyName] === productB[keyName]) === index);
+    const reduceProducts = (productMap, product) => {
+      if (!productMap.has(product[keyName])) {
+        productMap.set(product[keyName], { 
+          ...product, 
+          count: 0 
+        });
+      }
+      productMap.get(product[keyName]).count++;
+      return productMap;
+    };
+    const reducedProductsValues = [...productlist.reduce(reduceProducts, new Map()).values()];
+    return reducedProductsValues;
   }
 
   return (
     <main>
-      <header style={{ position: "absolute"}}>
-        <figure>
-          <span>Brand:</span>
+      <section className="products-filter">
+      <figure>
           <select
             value={filterByBrandKeyword}
             onChange={e => {
               if (e.target.value !== "select") {
-                setFilterByBrandKeyword(e.target.value);
                 filterProductsByBrand(e.target.value);
               }
             }}
             title="Select product brand"
           >
-            <option value="select" title="Select">Select</option>
+            <option value="select" title="Select product brand">Select product brand</option>
             {getUniqueProducts("brand").map(item => (
-              <option key={item.id} value={item.brand} title={item.brand}>{item.brand}</option>
+              <option key={item.id} value={item.brand} title={item.brand}>{`${item.brand} (${item.count})`}</option>
             ))}
         </select>
         </figure>
         <figure>
-          <span>Type:</span>
           <select
             value={filterByTypeKeyword}
             onChange={e => {
               if (e.target.value !== "select") {
               }
-              setFilterByTypeKeyword(e.target.value);
               filterProductsByType(e.target.value);
             }}
             title="Select product type"
           >
-            <option value="select" title="Select">Select</option>
+            <option value="select" title="Select product type">Select product type</option>
             {getUniqueProducts("type").map(item => (
-              <option key={item.id} value={item.type} title={item.type}>{item.type}</option>
+              <option key={item.id} value={item.type} title={item.type}>{`${item.brand} (${item.count})`}</option>
             ))}
         </select>
         </figure>
-      </header>
+      </section>
+      <section className="products-box">
         {products.map(product => (
-            <section key={product.id} title={product.name}>
-              <figure>
-                <img src={product.image} alt={product.name} />
-                <figcaption>
-                  {product.brand}
-                </figcaption>
-                <figcaption>
-                  {product.price}
-                </figcaption>
-              </figure>
-          </section>
+          <figure key={product.id} title={product.name} className="product-box-item">
+            <img src={product.image} alt={product.name} />
+            <figcaption>
+              {product.brand}
+            </figcaption>
+            <figcaption>
+              {product.price}
+            </figcaption>
+          </figure>
         ))}
+      </section>
     </main>
   );
 }

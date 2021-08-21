@@ -1,34 +1,40 @@
-body {
+main {
   margin: 2vh auto;
   max-width: 80vh;
 }
 
-main {
+section.products-filter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3vh;
+}
+
+section.products-box {
   display: flex;
   flex-wrap: wrap;
 }
 
-section {
+figure.product-box-item {
   margin-bottom: 5vh;
   width: calc(50% - 1vw);
   text-align: center;
 }
 
-figure {
+figure.product-box-item {
   margin: 0;
 }
 
-figcaption {
+figure.product-box-item figcaption {
   margin-top: 4vh;
 }
 
-img {
+figure.product-box-item img {
   height: auto;
   max-width: 100%;
 } 
 
 @media screen and (min-width: 800px) {
-  section {
+  figure.product-box-item {
     width: calc(40% - 6vh);
   }
 }
