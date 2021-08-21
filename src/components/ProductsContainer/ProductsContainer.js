@@ -10,7 +10,10 @@ const ProductsContainer = styled.section`
     margin: 0;
   }
   & figure.product-box-item figcaption  {
-    margin-top: 4vh;
+    margin-top: 2vh;
+  }
+  & figure.product-box-item figcaption.product-type  {
+    color: #737373
   }
   & figure.product-box-item img  {
     height: auto;

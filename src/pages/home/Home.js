@@ -124,7 +124,7 @@ const Home = () => {
                   <figcaption>
                     {product.brand}
                   </figcaption>
-                  <figcaption>
+                  <figcaption className="product-type">
                     {product.type}
                   </figcaption>
                   <figcaption>
