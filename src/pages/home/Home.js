@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import productlist from '../../resources/productlist';
+import getUniqueProducts from '../../utils/getUniqueProducts';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -24,20 +25,18 @@ function App() {
     setProducts(productlist.filter(product => product.type === productType));
   }
 
-  // get unique products and count by e.g brand
-  const getUniqueProducts = keyName => {
-    const reduceProducts = (productMap, product) => {
-      if (!productMap.has(product[keyName])) {
-        productMap.set(product[keyName], { 
-          ...product, 
-          count: 0 
-        });
-      }
-      productMap.get(product[keyName]).count++;
-      return productMap;
-    };
-    const reducedProductsValues = [...productlist.reduce(reduceProducts, new Map()).values()];
-    return reducedProductsValues;
+  // sort products by brand in ascending or descending order 
+  const sortProducts = sortType => {
+    const sortedProducts = [...products];
+    // ascending
+    if (sortType === "a-z") {
+      sortedProducts.sort(( a, b ) =>  a.brand.localeCompare(b.brand));
+    }
+    // // descending
+    if (sortType === "z-a") {
+      sortedProducts.sort(( a, b ) =>  b.brand.localeCompare(a.brand));
+    }
+    setProducts(sortedProducts);
   }
 
   return (
@@ -54,7 +53,7 @@ function App() {
             title="Select product brand"
           >
             <option value="select" title="Select product brand">Select product brand</option>
-            {getUniqueProducts("brand").map(item => (
+            {getUniqueProducts(productlist, "brand").map(item => (
               <option key={item.id} value={item.brand} title={item.brand}>{`${item.brand} (${item.count})`}</option>
             ))}
         </select>
@@ -70,10 +69,14 @@ function App() {
             title="Select product type"
           >
             <option value="select" title="Select product type">Select product type</option>
-            {getUniqueProducts("type").map(item => (
+            {getUniqueProducts(productlist, "type").map(item => (
               <option key={item.id} value={item.type} title={item.type}>{`${item.brand} (${item.count})`}</option>
             ))}
-        </select>
+          </select>
+        </figure>
+        <figure>
+          <span onClick={() => sortProducts("a-z")}>A - Z</span>
+          <span onClick={() => sortProducts("z-a")}>Z - A</span>
         </figure>
       </section>
       <section className="products-box">
