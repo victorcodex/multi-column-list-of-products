@@ -6,10 +6,13 @@ function App() {
   const [products, setProducts] = useState([]);
   const [filterByBrandKeyword, setFilterByBrandKeyword] = useState("");
   const [filterByTypeKeyword, setFilterByTypeKeyword] = useState("");
+  const [loadMoreProductsCounter, setLoadMoreProductsCounter] = useState(3);
 
   useEffect(() => {
-    setProducts(productlist);
-  }, []);
+    const splicedProducts = productlist.slice(0, loadMoreProductsCounter);
+    setProducts(splicedProducts);
+    // setProducts(productlist);
+  }, [loadMoreProductsCounter]);
 
   // filter products by brand
   const filterProductsByBrand = productBrand => {
@@ -37,6 +40,11 @@ function App() {
       sortedProducts.sort(( a, b ) =>  b.brand.localeCompare(a.brand));
     }
     setProducts(sortedProducts);
+  }
+
+  const loadMoreProducts = () => {
+    const incrementCounterBy = 3;
+    setLoadMoreProductsCounter(loadMoreProductsCounter + incrementCounterBy);
   }
 
   return (
@@ -92,6 +100,7 @@ function App() {
           </figure>
         ))}
       </section>
+      {products.length >= loadMoreProductsCounter && <button type="button" onClick={() => loadMoreProducts()}>Load more</button>}
     </main>
   );
 }
