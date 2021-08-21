@@ -75,7 +75,7 @@ const Home = () => {
           >
             <option value="select" title="Select product type">Select product type</option>
             {getUniqueProducts(productlist, "type").map(item => (
-              <option key={item.id} value={item.type} title={item.type}>{`${item.brand} (${item.count})`}</option>
+              <option key={item.id} value={item.type} title={item.type}>{`${item.type} (${item.count})`}</option>
             ))}
           </select>
         </figure>
