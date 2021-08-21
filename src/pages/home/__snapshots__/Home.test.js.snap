@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Home page 1`] = `
+exports[`Home page should render Home page 1`] = `
 <DocumentFragment>
   <main>
     <section
@@ -139,17 +139,55 @@ exports[`renders Home page 1`] = `
         </select>
       </figure>
       <figure>
-        <span>
-          A - Z
-        </span>
-        <span>
-          Z - A
-        </span>
+        Sort by:
+        <select
+          title="Sort"
+        >
+          <option
+            title="Select product type"
+            value="a-z"
+          >
+            Name A-Z
+          </option>
+          <option
+            title="Select product type"
+            value="z-a"
+          >
+            Name Z-A
+          </option>
+          <option
+            title="Select product type"
+            value="lowest-price"
+          >
+            Lowest price
+          </option>
+          <option
+            title="Select product type"
+            value="highest-price"
+          >
+            Highest price
+          </option>
+        </select>
       </figure>
     </section>
     <section
       class="products-box"
     >
+      <figure
+        class="product-box-item"
+        title="Issey Miyake L'Eau Majeure D'Issey Eau de Toilette"
+      >
+        <img
+          alt="Issey Miyake L'Eau Majeure D'Issey Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/i/s/issey-miyake-l-eau-majeure-d-issey-eau-de-toilette-100-ml-3423474889556.jpg"
+        />
+        <figcaption>
+          Issey Miyake
+        </figcaption>
+        <figcaption>
+          4595
+        </figcaption>
+      </figure>
       <figure
         class="product-box-item"
         title="Lancôme La vie est belle Eau de Parfum"
@@ -182,6 +220,366 @@ exports[`renders Home page 1`] = `
       </figure>
       <figure
         class="product-box-item"
+        title="Paco Rabanne 1 Million Eau de Toilette"
+      >
+        <img
+          alt="Paco Rabanne 1 Million Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/p/a/paco-rabanne-one-million-eau-de-toilette-100-ml-3349666007921.jpg"
+        />
+        <figcaption>
+          Paco Rabanne
+        </figcaption>
+        <figcaption>
+          4295
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Hugo Boss Boss Bottled Eau de Toilette"
+      >
+        <img
+          alt="Hugo Boss Boss Bottled Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/h/u/hugo-boss-boss-bottled-eau-de-toilette-50-ml-737052351018.jpg"
+        />
+        <figcaption>
+          Hugo Boss
+        </figcaption>
+        <figcaption>
+          3795
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Paco Rabanne Invictus Eau de Toilette"
+      >
+        <img
+          alt="Paco Rabanne Invictus Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/p/a/paco-rabanne-invictus-eau-de-toilette-100-ml-3349668515660.jpg"
+        />
+        <figcaption>
+          Paco Rabanne
+        </figcaption>
+        <figcaption>
+          4395
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Giorgio Armani Sì Eau de Parfum"
+      >
+        <img
+          alt="Giorgio Armani Sì Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/g/i/giorgio-armani-si-eau-de-parfum-50ml_7.jpg"
+        />
+        <figcaption>
+          Giorgio Armani
+        </figcaption>
+        <figcaption>
+          4395
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Paco Rabanne Olympéa Eau de Parfum"
+      >
+        <img
+          alt="Paco Rabanne Olympéa Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/p/a/paco-rabanne-olympea-eau-de-parfum-50-ml-3349668528660.jpg"
+        />
+        <figcaption>
+          Paco Rabanne
+        </figcaption>
+        <figcaption>
+          3780
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Chloé Chloé Eau de Parfum"
+      >
+        <img
+          alt="Chloé Chloé Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/c/h/chloe-chloe-eau-de-parfum-75-ml-3607346232385.jpg"
+        />
+        <figcaption>
+          Chloé
+        </figcaption>
+        <figcaption>
+          3695
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Giorgio Armani Code Homme Eau de Toilette"
+      >
+        <img
+          alt="Giorgio Armani Code Homme Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/g/i/giorgio-armani-code-homme-eau-de-toilette-125-ml.jpg"
+        />
+        <figcaption>
+          Giorgio Armani
+        </figcaption>
+        <figcaption>
+          3795
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Giorgio Armani Code Femme Eau de Parfum"
+      >
+        <img
+          alt="Giorgio Armani Code Femme Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/g/i/giorgio-armani-code-femme-eau-de-parfum-50-ml.jpg"
+        />
+        <figcaption>
+          Giorgio Armani
+        </figcaption>
+        <figcaption>
+          3995
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Narciso Rodriguez NARCISO Poudrée Eau de Parfum"
+      >
+        <img
+          alt="Narciso Rodriguez NARCISO Poudrée Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/n/a/narciso-rodriguez-poudree-eau-de-parfum-50-ml.jpg"
+        />
+        <figcaption>
+          Narciso Rodriguez
+        </figcaption>
+        <figcaption>
+          3995
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Lancôme Trésor Eau de Parfum"
+      >
+        <img
+          alt="Lancôme Trésor Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/l/a/lancome-tresor-eau-de-parfum-100ml_8.jpg"
+        />
+        <figcaption>
+          Lancôme
+        </figcaption>
+        <figcaption>
+          2695
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Dolce & Gabbana The One Eau de Parfum"
+      >
+        <img
+          alt="Dolce & Gabbana The One Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/d/o/dolce-gabbana-the-one-eau-de-parfum-75ml_1.jpg"
+        />
+        <figcaption>
+          Dolce & Gabbana
+        </figcaption>
+        <figcaption>
+          4495
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Lacoste Pour Femme Eau de Parfum"
+      >
+        <img
+          alt="Lacoste Pour Femme Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/l/a/lacoste-pour-femme-eau-de-parfum.jpg"
+        />
+        <figcaption>
+          Lacoste
+        </figcaption>
+        <figcaption>
+          2999
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Dior Homme Intense Eau de Parfum"
+      >
+        <img
+          alt="Dior Homme Intense Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/d/i/dior-homme-eau-de-parfum-100ml_1.jpg"
+        />
+        <figcaption>
+          Dior
+        </figcaption>
+        <figcaption>
+          5795
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Emporio Armani Emporio She Eau de Parfum"
+      >
+        <img
+          alt="Emporio Armani Emporio She Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/e/m/emporio-armani-emporio-she-eau-de-parfum-50ml_7.jpg"
+        />
+        <figcaption>
+          Emporio Armani
+        </figcaption>
+        <figcaption>
+          2795
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Yves Saint Laurent Black Opium Eau de Parfum"
+      >
+        <img
+          alt="Yves Saint Laurent Black Opium Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/y/v/yves-saint-laurent-black-opium-eau-de-parfum.jpg"
+        />
+        <figcaption>
+          Yves Saint Laurent
+        </figcaption>
+        <figcaption>
+          4895
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Paco Rabanne Lady Million Eau de Parfum"
+      >
+        <img
+          alt="Paco Rabanne Lady Million Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/p/a/paco-rabanne-lady-million-eau-de-parfum-80-ml-3349668508587.jpg"
+        />
+        <figcaption>
+          Paco Rabanne
+        </figcaption>
+        <figcaption>
+          3695
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Guerlain Mon Guerlain Eau de Parfum"
+      >
+        <img
+          alt="Guerlain Mon Guerlain Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/g/u/guerlain-mon-guerlain-eau-de-parfum-50-ml-3346470131392.jpg"
+        />
+        <figcaption>
+          Guerlain
+        </figcaption>
+        <figcaption>
+          5195
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Paco Rabanne 1 Million Privé Eau de Parfum"
+      >
+        <img
+          alt="Paco Rabanne 1 Million Privé Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/p/a/paco-rabanne-1-million-prive-eau-de-parfum-50-ml-3349668535484.jpg"
+        />
+        <figcaption>
+          Paco Rabanne
+        </figcaption>
+        <figcaption>
+          4695
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Hugo Boss Boss The Scent Eau de Toilette"
+      >
+        <img
+          alt="Hugo Boss Boss The Scent Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/h/u/hugo-boss-boss-the-scent-eau-de-toilette.jpg"
+        />
+        <figcaption>
+          Hugo Boss
+        </figcaption>
+        <figcaption>
+          4495
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Giorgio Armani Acqua di Giò Homme Eau de Toilette"
+      >
+        <img
+          alt="Giorgio Armani Acqua di Giò Homme Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/g/i/giorgio-armani-acqua-di-gio-homme-eau-de-toilette-200-ml-3360372078500.jpg"
+        />
+        <figcaption>
+          Giorgio Armani
+        </figcaption>
+        <figcaption>
+          4195
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Dolce & Gabbana Light Blue Eau de Toilette"
+      >
+        <img
+          alt="Dolce & Gabbana Light Blue Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/d/o/dolce-and-gabbana-light-blue-eau-de-toilette-50ml_9.jpg"
+        />
+        <figcaption>
+          Dolce & Gabbana
+        </figcaption>
+        <figcaption>
+          2895
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Hugo Boss Boss Ma Vie pour Femme Eau de Parfum"
+      >
+        <img
+          alt="Hugo Boss Boss Ma Vie pour Femme Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/h/u/hugo-boss-boss-ma-vie-pour-femme-eau-de-parfum-75-ml-737052802800.jpg"
+        />
+        <figcaption>
+          Hugo Boss
+        </figcaption>
+        <figcaption>
+          3495
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Dior Sauvage Eau de Toilette"
+      >
+        <img
+          alt="Dior Sauvage Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/d/i/dior-sauvage-eau-de-toilette-100-ml.jpg"
+        />
+        <figcaption>
+          Dior
+        </figcaption>
+        <figcaption>
+          5995
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Viktor & Rolf Flowerbomb Eau de Parfum"
+      >
+        <img
+          alt="Viktor & Rolf Flowerbomb Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/v/i/viktor-and-rolf-flowerbomb-eau-de-parfum-100-ml.jpg"
+        />
+        <figcaption>
+          Viktor & Rolf
+        </figcaption>
+        <figcaption>
+          5095
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
         title="Jean Paul Gaultier Scandal Eau de Parfum"
       >
         <img
@@ -195,12 +593,37 @@ exports[`renders Home page 1`] = `
           3895
         </figcaption>
       </figure>
+      <figure
+        class="product-box-item"
+        title="Hugo Boss Boss The Scent for her Eau de Parfum"
+      >
+        <img
+          alt="Hugo Boss Boss The Scent for her Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/h/u/hugo-boss-boss-the-scent-for-her-eau-de-parfum-100-ml-730870196885.jpg"
+        />
+        <figcaption>
+          Hugo Boss
+        </figcaption>
+        <figcaption>
+          4295
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Giorgio Armani Code Homme Profumo Parfum"
+      >
+        <img
+          alt="Giorgio Armani Code Homme Profumo Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/g/i/giorgio-armani-code-homme-profumo-parfum-30-ml-3614270581649.jpg"
+        />
+        <figcaption>
+          Giorgio Armani
+        </figcaption>
+        <figcaption>
+          4695
+        </figcaption>
+      </figure>
     </section>
-    <button
-      type="button"
-    >
-      Load more
-    </button>
   </main>
 </DocumentFragment>
 `;

@@ -7,13 +7,14 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [filterByBrandKeyword, setFilterByBrandKeyword] = useState("");
   const [filterByTypeKeyword, setFilterByTypeKeyword] = useState("");
-  const [loadMoreProductsCounter, setLoadMoreProductsCounter] = useState(3);
-
+  const intialSortBy = "most-popular";
+  const [sortBy, setSortBy] = useState(intialSortBy);
+  
   // load products
   useEffect(() => {
-    const splicedProducts = productlist.slice(0, loadMoreProductsCounter);
-    setProducts(splicedProducts);
-  }, [loadMoreProductsCounter]);
+    const sortByAsc = sortProducts(productlist, "brand", intialSortBy);
+    setProducts(sortByAsc);
+  }, []);
 
   // filter products by brand
   const filterProductsByBrand = productBrand => {
@@ -33,15 +34,6 @@ const Home = () => {
   const handSortProducts = sortType => {
     const sortedProducts = sortProducts(products, "brand", sortType);
     setProducts(sortedProducts);
-  }
-
-  /*  
-    Because of time constarint, the load more functionality is independent of the filters and sorting. 
-    Also, the load more button should be hidden when the length of the displayed products equals the displayable products
-  */
-  const loadMoreProducts = () => {
-    const incrementCounterBy = 3;
-    setLoadMoreProductsCounter(loadMoreProductsCounter + incrementCounterBy);
   }
 
   return (
@@ -80,8 +72,20 @@ const Home = () => {
           </select>
         </figure>
         <figure>
-          <span onClick={() => handSortProducts("a-z")}>A - Z</span>
-          <span onClick={() => handSortProducts("z-a")}>Z - A</span>
+        Sort by:
+        <select
+            value={sortBy}
+            onChange={e => {
+              handSortProducts(e.target.value);
+              setSortBy(e.target.value);
+            }}
+            title="Sort"
+          >
+            <option value="a-z" title="Select product type">Name A-Z</option>
+            <option value="z-a" title="Select product type">Name Z-A</option>
+            <option value="lowest-price" title="Select product type">Lowest price</option>
+            <option value="highest-price" title="Select product type">Highest price</option>
+          </select>
         </figure>
       </section>
       <section className="products-box">
@@ -97,7 +101,6 @@ const Home = () => {
           </figure>
         ))}
       </section>
-      {products.length >= loadMoreProductsCounter && <button type="button" onClick={() => loadMoreProducts()}>Load more</button>}
     </main>
   );
 }
