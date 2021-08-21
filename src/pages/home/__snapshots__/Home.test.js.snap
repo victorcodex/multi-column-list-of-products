@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Home page 1`] = `
+<DocumentFragment>
+  <main>
+    <section
+      class="products-filter"
+    >
+      <figure>
+        <select
+          title="Select product brand"
+        >
+          <option
+            title="Select product brand"
+            value="select"
+          >
+            Select product brand
+          </option>
+          <option
+            title="Lancôme"
+            value="Lancôme"
+          >
+            Lancôme (2)
+          </option>
+          <option
+            title="Jean Paul Gaultier"
+            value="Jean Paul Gaultier"
+          >
+            Jean Paul Gaultier (2)
+          </option>
+          <option
+            title="Paco Rabanne"
+            value="Paco Rabanne"
+          >
+            Paco Rabanne (5)
+          </option>
+          <option
+            title="Hugo Boss"
+            value="Hugo Boss"
+          >
+            Hugo Boss (4)
+          </option>
+          <option
+            title="Giorgio Armani"
+            value="Giorgio Armani"
+          >
+            Giorgio Armani (5)
+          </option>
+          <option
+            title="Yves Saint Laurent"
+            value="Yves Saint Laurent"
+          >
+            Yves Saint Laurent (1)
+          </option>
+          <option
+            title="Chloé"
+            value="Chloé"
+          >
+            Chloé (1)
+          </option>
+          <option
+            title="Dior"
+            value="Dior"
+          >
+            Dior (2)
+          </option>
+          <option
+            title="Guerlain"
+            value="Guerlain"
+          >
+            Guerlain (1)
+          </option>
+          <option
+            title="Narciso Rodriguez"
+            value="Narciso Rodriguez"
+          >
+            Narciso Rodriguez (1)
+          </option>
+          <option
+            title="Issey Miyake"
+            value="Issey Miyake"
+          >
+            Issey Miyake (1)
+          </option>
+          <option
+            title="Dolce & Gabbana"
+            value="Dolce & Gabbana"
+          >
+            Dolce & Gabbana (2)
+          </option>
+          <option
+            title="Lacoste"
+            value="Lacoste"
+          >
+            Lacoste (1)
+          </option>
+          <option
+            title="Viktor & Rolf"
+            value="Viktor & Rolf"
+          >
+            Viktor & Rolf (1)
+          </option>
+          <option
+            title="Emporio Armani"
+            value="Emporio Armani"
+          >
+            Emporio Armani (1)
+          </option>
+        </select>
+      </figure>
+      <figure>
+        <select
+          title="Select product type"
+        >
+          <option
+            title="Select product type"
+            value="select"
+          >
+            Select product type
+          </option>
+          <option
+            title="Eau de Parfum"
+            value="Eau de Parfum"
+          >
+            Eau de Parfum (19)
+          </option>
+          <option
+            title="Eau de Toilette"
+            value="Eau de Toilette"
+          >
+            Eau de Toilette (10)
+          </option>
+          <option
+            title="Parfum"
+            value="Parfum"
+          >
+            Parfum (1)
+          </option>
+        </select>
+      </figure>
+      <figure>
+        <span>
+          A - Z
+        </span>
+        <span>
+          Z - A
+        </span>
+      </figure>
+    </section>
+    <section
+      class="products-box"
+    >
+      <figure
+        class="product-box-item"
+        title="Lancôme La vie est belle Eau de Parfum"
+      >
+        <img
+          alt="Lancôme La vie est belle Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/l/a/lancome-la-vie-est-belle-eau-de-parfum-30-ml.jpg"
+        />
+        <figcaption>
+          Lancôme
+        </figcaption>
+        <figcaption>
+          3895
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Jean Paul Gaultier Le Male Eau de Toilette"
+      >
+        <img
+          alt="Jean Paul Gaultier Le Male Eau de Toilette"
+          src="https://cdn.flaconi.de/media/catalog/215x/j/e/jean-paul-gaultier-le-male-eau-de-toilette-125-ml-3423470317534.jpg"
+        />
+        <figcaption>
+          Jean Paul Gaultier
+        </figcaption>
+        <figcaption>
+          3395
+        </figcaption>
+      </figure>
+      <figure
+        class="product-box-item"
+        title="Jean Paul Gaultier Scandal Eau de Parfum"
+      >
+        <img
+          alt="Jean Paul Gaultier Scandal Eau de Parfum"
+          src="https://cdn.flaconi.de/media/catalog/215x/j/e/jean-paul-gaultier-scandal-eau-de-parfum-80-ml-8435415006408.jpg"
+        />
+        <figcaption>
+          Jean Paul Gaultier
+        </figcaption>
+        <figcaption>
+          3895
+        </figcaption>
+      </figure>
+    </section>
+    <button
+      type="button"
+    >
+      Load more
+    </button>
+  </main>
+</DocumentFragment>
+`;
