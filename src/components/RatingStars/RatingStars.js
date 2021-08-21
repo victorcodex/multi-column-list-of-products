@@ -8,7 +8,7 @@ const RatingStars = styled.span`
     top: 0;
     left: 0;
     content: '★★★★★';
-    color: lightgray;
+    color: #d3d3d3;
   }
   &:after {
     position: absolute;
