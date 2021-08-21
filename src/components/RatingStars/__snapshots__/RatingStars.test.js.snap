@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RatingStars component should render rating stars 1`] = `
+<DocumentFragment>
+  <span
+    class="sc-bdnxRM dbCYzZ"
+  >
+    ★★★★★
+  </span>
+</DocumentFragment>
+`;

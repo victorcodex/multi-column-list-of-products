@@ -144,25 +144,31 @@ exports[`Home page should render Home page 1`] = `
           title="Sort"
         >
           <option
-            title="Select product type"
+            title="Sort by most popular"
+            value="most-popular"
+          >
+            Most popular
+          </option>
+          <option
+            title="Sort by brand A-Z"
             value="a-z"
           >
-            Name A-Z
+            Brand A-Z
           </option>
           <option
-            title="Select product type"
+            title="Sort by brand A-Z"
             value="z-a"
           >
-            Name Z-A
+            Brand Z-A
           </option>
           <option
-            title="Select product type"
+            title="Sort by lowest price"
             value="lowest-price"
           >
             Lowest price
           </option>
           <option
-            title="Select product type"
+            title="Sort by highest price"
             value="highest-price"
           >
             Highest price
@@ -185,7 +191,16 @@ exports[`Home page should render Home page 1`] = `
           Issey Miyake
         </figcaption>
         <figcaption>
-          4595
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €45.95 / 50ML
+          <br />
+          <span
+            class="sc-bdnxRM dbCYzZ"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -200,7 +215,16 @@ exports[`Home page should render Home page 1`] = `
           Lancôme
         </figcaption>
         <figcaption>
-          3895
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €38.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -215,7 +239,16 @@ exports[`Home page should render Home page 1`] = `
           Jean Paul Gaultier
         </figcaption>
         <figcaption>
-          3395
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €33.95 / 40ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -230,7 +263,16 @@ exports[`Home page should render Home page 1`] = `
           Paco Rabanne
         </figcaption>
         <figcaption>
-          4295
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €42.95 / 50ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -245,7 +287,16 @@ exports[`Home page should render Home page 1`] = `
           Hugo Boss
         </figcaption>
         <figcaption>
-          3795
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €37.95 / 50ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -260,7 +311,16 @@ exports[`Home page should render Home page 1`] = `
           Paco Rabanne
         </figcaption>
         <figcaption>
-          4395
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €43.95 / 50ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -275,7 +335,16 @@ exports[`Home page should render Home page 1`] = `
           Giorgio Armani
         </figcaption>
         <figcaption>
-          4395
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €43.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -290,7 +359,16 @@ exports[`Home page should render Home page 1`] = `
           Paco Rabanne
         </figcaption>
         <figcaption>
-          3780
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €37.80 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -305,7 +383,16 @@ exports[`Home page should render Home page 1`] = `
           Chloé
         </figcaption>
         <figcaption>
-          3695
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €36.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -320,7 +407,16 @@ exports[`Home page should render Home page 1`] = `
           Giorgio Armani
         </figcaption>
         <figcaption>
-          3795
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €37.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -335,7 +431,16 @@ exports[`Home page should render Home page 1`] = `
           Giorgio Armani
         </figcaption>
         <figcaption>
-          3995
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €39.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -350,7 +455,16 @@ exports[`Home page should render Home page 1`] = `
           Narciso Rodriguez
         </figcaption>
         <figcaption>
-          3995
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €39.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -365,7 +479,16 @@ exports[`Home page should render Home page 1`] = `
           Lancôme
         </figcaption>
         <figcaption>
-          2695
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €26.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -380,7 +503,16 @@ exports[`Home page should render Home page 1`] = `
           Dolce & Gabbana
         </figcaption>
         <figcaption>
-          4495
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €44.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -395,7 +527,16 @@ exports[`Home page should render Home page 1`] = `
           Lacoste
         </figcaption>
         <figcaption>
-          2999
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €29.99 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -410,7 +551,16 @@ exports[`Home page should render Home page 1`] = `
           Dior
         </figcaption>
         <figcaption>
-          5795
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €57.95 / 50ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -425,7 +575,16 @@ exports[`Home page should render Home page 1`] = `
           Emporio Armani
         </figcaption>
         <figcaption>
-          2795
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €27.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVcsgE"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -440,7 +599,16 @@ exports[`Home page should render Home page 1`] = `
           Yves Saint Laurent
         </figcaption>
         <figcaption>
-          4895
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €48.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -455,7 +623,16 @@ exports[`Home page should render Home page 1`] = `
           Paco Rabanne
         </figcaption>
         <figcaption>
-          3695
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €36.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -470,7 +647,16 @@ exports[`Home page should render Home page 1`] = `
           Guerlain
         </figcaption>
         <figcaption>
-          5195
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €51.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -485,7 +671,16 @@ exports[`Home page should render Home page 1`] = `
           Paco Rabanne
         </figcaption>
         <figcaption>
-          4695
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €46.95 / 50ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -500,7 +695,16 @@ exports[`Home page should render Home page 1`] = `
           Hugo Boss
         </figcaption>
         <figcaption>
-          4495
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €44.95 / 50ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -515,7 +719,16 @@ exports[`Home page should render Home page 1`] = `
           Giorgio Armani
         </figcaption>
         <figcaption>
-          4195
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €41.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -530,7 +743,16 @@ exports[`Home page should render Home page 1`] = `
           Dolce & Gabbana
         </figcaption>
         <figcaption>
-          2895
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €28.95 / 25ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -545,7 +767,16 @@ exports[`Home page should render Home page 1`] = `
           Hugo Boss
         </figcaption>
         <figcaption>
-          3495
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €34.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gVAGKN"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -560,7 +791,16 @@ exports[`Home page should render Home page 1`] = `
           Dior
         </figcaption>
         <figcaption>
-          5995
+          Eau de Toilette
+        </figcaption>
+        <figcaption>
+          from €59.95 / 60ML
+          <br />
+          <span
+            class="sc-bdnxRM gWEHca"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -575,7 +815,16 @@ exports[`Home page should render Home page 1`] = `
           Viktor & Rolf
         </figcaption>
         <figcaption>
-          5095
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €50.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gWEHca"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -590,7 +839,16 @@ exports[`Home page should render Home page 1`] = `
           Jean Paul Gaultier
         </figcaption>
         <figcaption>
-          3895
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €38.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gXcVGj"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -605,7 +863,16 @@ exports[`Home page should render Home page 1`] = `
           Hugo Boss
         </figcaption>
         <figcaption>
-          4295
+          Eau de Parfum
+        </figcaption>
+        <figcaption>
+          from €42.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gXcVGj"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
       <figure
@@ -620,7 +887,16 @@ exports[`Home page should render Home page 1`] = `
           Giorgio Armani
         </figcaption>
         <figcaption>
-          4695
+          Parfum
+        </figcaption>
+        <figcaption>
+          from €46.95 / 30ML
+          <br />
+          <span
+            class="sc-bdnxRM gXcVGj"
+          >
+            ★★★★★
+          </span>
         </figcaption>
       </figure>
     </section>

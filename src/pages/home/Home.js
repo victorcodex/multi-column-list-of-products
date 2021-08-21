@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import productlist from '../../resources/productlist';
 import getUniqueProducts from '../../utils/getUniqueProducts';
 import sortProducts from '../../utils/sortProducts';
+import convertCentsToEuro from '../../utils/convertCentsToEuro';
+import RatingStars from '../../components/RatingStars/RatingStars';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -12,22 +14,24 @@ const Home = () => {
   
   // load products
   useEffect(() => {
-    const sortByAsc = sortProducts(productlist, "brand", intialSortBy);
-    setProducts(sortByAsc);
+    const sortedProducts = sortProducts(productlist, "brand", intialSortBy);
+    setProducts(sortedProducts);
   }, []);
 
   // filter products by brand
   const filterProductsByBrand = productBrand => {
     setFilterByTypeKeyword("");
     setFilterByBrandKeyword(productBrand);
-    setProducts(productlist.filter(product => product.brand === productBrand));
+    const sortedProducts = sortProducts(productlist, "brand", sortBy);
+    setProducts(sortedProducts.filter(product => product.brand === productBrand));
   }
 
   // filter products by brand
   const filterProductsByType = productType => {
     setFilterByBrandKeyword("");
     setFilterByTypeKeyword(productType);
-    setProducts(productlist.filter(product => product.type === productType));
+    const sortedProducts = sortProducts(productlist, "brand", sortBy);
+    setProducts(sortedProducts.filter(product => product.type === productType));
   }
 
   // sort products by brand in ascending or descending order 
@@ -81,10 +85,11 @@ const Home = () => {
             }}
             title="Sort"
           >
-            <option value="a-z" title="Select product type">Name A-Z</option>
-            <option value="z-a" title="Select product type">Name Z-A</option>
-            <option value="lowest-price" title="Select product type">Lowest price</option>
-            <option value="highest-price" title="Select product type">Highest price</option>
+            <option value="most-popular" title="Sort by most popular">Most popular</option>
+            <option value="a-z" title="Sort by brand A-Z">Brand A-Z</option>
+            <option value="z-a" title="Sort by brand A-Z">Brand Z-A</option>
+            <option value="lowest-price" title="Sort by lowest price">Lowest price</option>
+            <option value="highest-price" title="Sort by highest price">Highest price</option>
           </select>
         </figure>
       </section>
@@ -96,7 +101,12 @@ const Home = () => {
               {product.brand}
             </figcaption>
             <figcaption>
-              {product.price}
+              {product.type}
+            </figcaption>
+            <figcaption>
+              {`from ${convertCentsToEuro(product.price)} / ${product.size}`}
+              <br />
+              <RatingStars rating={product.rating}>★★★★★</RatingStars>
             </figcaption>
           </figure>
         ))}
