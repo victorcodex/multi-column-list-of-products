@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import productlist from '../../resources/productlist';
 import getUniqueProducts from '../../utils/getUniqueProducts';
+import sortProducts from '../../utils/sortProducts';
 
-function App() {
+const Home = () => {
   const [products, setProducts] = useState([]);
   const [filterByBrandKeyword, setFilterByBrandKeyword] = useState("");
   const [filterByTypeKeyword, setFilterByTypeKeyword] = useState("");
   const [loadMoreProductsCounter, setLoadMoreProductsCounter] = useState(3);
 
+  // load products
   useEffect(() => {
     const splicedProducts = productlist.slice(0, loadMoreProductsCounter);
     setProducts(splicedProducts);
-    // setProducts(productlist);
   }, [loadMoreProductsCounter]);
 
   // filter products by brand
@@ -29,19 +30,15 @@ function App() {
   }
 
   // sort products by brand in ascending or descending order 
-  const sortProducts = sortType => {
-    const sortedProducts = [...products];
-    // ascending
-    if (sortType === "a-z") {
-      sortedProducts.sort(( a, b ) =>  a.brand.localeCompare(b.brand));
-    }
-    // // descending
-    if (sortType === "z-a") {
-      sortedProducts.sort(( a, b ) =>  b.brand.localeCompare(a.brand));
-    }
+  const handSortProducts = sortType => {
+    const sortedProducts = sortProducts(products, "brand", sortType);
     setProducts(sortedProducts);
   }
 
+  /*  
+    Because of time constarint, the load more functionality is independent of the filters and sorting. 
+    Also, the load more button should be hidden when the length of the displayed products equals the displayable products
+  */
   const loadMoreProducts = () => {
     const incrementCounterBy = 3;
     setLoadMoreProductsCounter(loadMoreProductsCounter + incrementCounterBy);
@@ -83,8 +80,8 @@ function App() {
           </select>
         </figure>
         <figure>
-          <span onClick={() => sortProducts("a-z")}>A - Z</span>
-          <span onClick={() => sortProducts("z-a")}>Z - A</span>
+          <span onClick={() => handSortProducts("a-z")}>A - Z</span>
+          <span onClick={() => handSortProducts("z-a")}>Z - A</span>
         </figure>
       </section>
       <section className="products-box">
@@ -105,4 +102,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
