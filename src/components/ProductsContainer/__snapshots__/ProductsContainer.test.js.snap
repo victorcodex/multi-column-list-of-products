@@ -3,7 +3,7 @@
 exports[`ProductsContainer component should render product container 1`] = `
 <DocumentFragment>
   <section
-    class="sc-bdnxRM gyxSxt"
+    class="sc-bdnxRM bwoTdx"
   />
 </DocumentFragment>
 `;

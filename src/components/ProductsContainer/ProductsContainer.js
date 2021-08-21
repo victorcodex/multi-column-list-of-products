@@ -12,8 +12,15 @@ const ProductsContainer = styled.section`
   & figure.product-box-item figcaption  {
     margin-top: 2vh;
   }
+  & figure.product-box-item figcaption.product-name  {
+    padding: 0 3vh;
+  }
   & figure.product-box-item figcaption.product-type  {
-    color: #737373
+    color: #737373;
+  }
+  & figure.product-box-item figcaption.product-price-wrapper  {
+    font-size: 1rem;
+    line-height: 1.2;
   }
   & figure.product-box-item img  {
     height: auto;

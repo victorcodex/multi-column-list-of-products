@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectInput component should render select element 1`] = `
+<DocumentFragment>
+  <select
+    class="sc-bdnxRM koaRiL"
+  />
+</DocumentFragment>
+`;

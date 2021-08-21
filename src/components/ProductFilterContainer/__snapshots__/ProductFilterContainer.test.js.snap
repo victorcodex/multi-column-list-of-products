@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductFilterContainer component should render filter container 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-bdnxRM DImr"
+  />
+</DocumentFragment>
+`;

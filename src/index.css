@@ -6,13 +6,11 @@ audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, d
   vertical-align: baseline;
 }
 
-main {
-  margin: 2vh auto;
+body, html {
+  font-size: 14px;
+  font-family: "Fenomen Sans",Arial,Helvetica,"Helvetica Neue",Helvetica,sans-serif;
+  background: #fff;
+  color: #292929;
+  margin: 1vh auto;
   max-width: 80vh;
-}
-
-section.products-filter {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 3vh;
 }
