@@ -5,7 +5,7 @@ const productService = () => {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(productlist);
-      }, 2000);
+      }, 1000);
     });
   }
 
