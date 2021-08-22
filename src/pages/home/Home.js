@@ -87,7 +87,10 @@ const Home = () => {
             <SelectInput
               value={filterByBrandKeyword}
               onChange={e => {
-                if (e.target.value !== "select") {
+                if (e.target.value === "select") {
+                  setFilterByBrandKeyword("select");
+                  setProducts(productListFiltered);
+                } else {
                   filterProductsByBrand(e.target.value);
                 }
               }}
