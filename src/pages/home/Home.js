@@ -71,9 +71,11 @@ const Home = () => {
             <SelectInput
               value={filterByTypeKeyword}
               onChange={e => {
-                if (e.target.value !== "select") {
+                if (e.target.value === "select") {
+                  setProducts(productListCopy);
+                } else {
+                  filterProductsByType(e.target.value);
                 }
-                filterProductsByType(e.target.value);
               }}
               title="Select product type"
             >
