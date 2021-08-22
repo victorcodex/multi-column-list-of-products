@@ -8,6 +8,10 @@ describe("Load products", () => {
     });
 
     it("successfully loaded products", () => {
+        expect(products.length).toBeGreaterThan(0);
+    });
+
+    it("loaded products has expected object properties", () => {
         const product = products[0];
         expect(product).toHaveProperty('id');
         expect(product).toHaveProperty('name');
