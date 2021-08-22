@@ -2,23 +2,23 @@ import sortProducts from "./sortProducts";
 
 const products = [
     {
-        "id": "30103318",
         "brand": "Jean Paul Gaultier",
         "type": "Eau de Toilette",
+        "name": "Jean Paul Gaultier Le Male Eau de Toilette",
         "price": 3395,
         "rating": 100
     },
     {
-        "id": "30150001",
         "brand": "Lancôme",
         "type": "Eau de Parfum",
+        "name": "Lancôme Trésor Eau de Parfum",
         "price": 4111,
         "rating": 99
     },
     {
-        "id": "30170189",
         "brand": "Paco Rabanne",
         "type": "Eau de Toilette",
+        "name": "Paco Rabanne 1 Million Eau de Toilette",
         "price": 5111,
         "rating": 98
     },
@@ -29,13 +29,13 @@ describe('Sort products', () => {
         const sortByDesc = sortProducts(products, "", "most-popular");
         expect(sortByDesc[0].rating).toEqual(100);
     });
-    it('should sort by brand in an ascending order', () => {
-        const sortByAsc = sortProducts(products, "brand", "a-z");
-        expect(sortByAsc[0].brand).toEqual("Jean Paul Gaultier");
+    it('should sort by name in an ascending order', () => {
+        const sortByAsc = sortProducts(products, "name", "a-z");
+        expect(sortByAsc[0].name).toEqual("Jean Paul Gaultier Le Male Eau de Toilette");
     });
-    it('should sort by brand in a ascending order', () => {
-        const sortByDesc = sortProducts(products, "brand", "z-a");
-        expect(sortByDesc[0].brand).toEqual("Paco Rabanne");
+    it('should sort by name in a ascending order', () => {
+        const sortByDesc = sortProducts(products, "name", "z-a");
+        expect(sortByDesc[0].name).toEqual("Paco Rabanne 1 Million Eau de Toilette");
     });
     it('should sort by lowest price', () => {
         const sortByDesc = sortProducts(products, "", "lowest-price");

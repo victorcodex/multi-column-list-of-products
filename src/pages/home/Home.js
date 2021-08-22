@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import loadProducts from '../../service/productService';
+import productService from '../../service/productService/productService';
 import getUniqueProducts from '../../utils/getUniqueProducts';
 import sortProducts from '../../utils/sortProducts';
 import convertCentsToEuro from '../../utils/convertCentsToEuro';
@@ -12,6 +12,7 @@ import { LoadingAnimationContainer, LoadingAnimation } from '../../components/Lo
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [productListCopy, setProductListCopy] = useState([]);
+  const [productListFiltered, setProductListFiltered] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filterByBrandKeyword, setFilterByBrandKeyword] = useState("");
   const [filterByTypeKeyword, setFilterByTypeKeyword] = useState("");
@@ -20,11 +21,13 @@ const Home = () => {
   
   // load products
   useEffect(() => {
-    loadProducts().then(productsData => {
+    productService().then(productsData => {
       setIsLoading(false);
-      // copy of products list is needed for the filters
+      // copy of products list is needed for the product type filter
       setProductListCopy(productsData);
-      const sortedProducts = sortProducts(productsData, "brand", intialSortBy);
+      // copy of products list is needed for the product brand filter
+      setProductListFiltered(productsData);
+      const sortedProducts = sortProducts(productsData, "name", intialSortBy);
       setProducts(sortedProducts);
     }).catch(error => {
       setIsLoading(false);
@@ -32,25 +35,27 @@ const Home = () => {
     });
   }, []);
 
-  // filter products by brand
-  const filterProductsByBrand = productBrand => {
-    setFilterByTypeKeyword("");
-    setFilterByBrandKeyword(productBrand);
-    const sortedProducts = sortProducts(productListCopy, "brand", sortBy);
-    setProducts(sortedProducts.filter(product => product.brand === productBrand));
-  }
 
-  // filter products by brand
+  // filter products by type
   const filterProductsByType = productType => {
     setFilterByBrandKeyword("");
     setFilterByTypeKeyword(productType);
-    const sortedProducts = sortProducts(productListCopy, "brand", sortBy);
-    setProducts(sortedProducts.filter(product => product.type === productType));
+    const sortedProducts = sortProducts(productListCopy, "name", sortBy);
+    const filterProducts = sortedProducts.filter(product => product.type === productType);
+    setProductListFiltered(filterProducts);
+    setProducts(filterProducts);
+  }
+
+  // filter products by brand
+  const filterProductsByBrand = productBrand => {
+    setFilterByBrandKeyword(productBrand);
+    const sortedProducts = sortProducts(productListFiltered, "name", sortBy);
+    setProducts(sortedProducts.filter(product => product.brand === productBrand));
   }
 
   // sort products by brand in ascending or descending order 
   const handSortProducts = sortType => {
-    const sortedProducts = sortProducts(products, "brand", sortType);
+    const sortedProducts = sortProducts(products, "name", sortType);
     setProducts(sortedProducts);
   }
 
@@ -64,6 +69,20 @@ const Home = () => {
         <React.Fragment>
           <ProductFilterContainer>
             <SelectInput
+              value={filterByTypeKeyword}
+              onChange={e => {
+                if (e.target.value !== "select") {
+                }
+                filterProductsByType(e.target.value);
+              }}
+              title="Select product type"
+            >
+              <option value="select" title="Select product type">Select product type</option>
+              {getUniqueProducts(productListCopy, "type").map(item => (
+                <option key={item.id} value={item.type} title={item.type}>{`${item.type} (${item.count})`}</option>
+              ))}
+            </SelectInput>
+            <SelectInput
               value={filterByBrandKeyword}
               onChange={e => {
                 if (e.target.value !== "select") {
@@ -73,23 +92,9 @@ const Home = () => {
               title="Select product brand"
             >
               <option value="select" title="Select product brand">Select product brand</option>
-              {getUniqueProducts(productListCopy, "brand").map(item => (
+              {getUniqueProducts(productListFiltered, "brand").map(item => (
                 <option key={item.id} value={item.brand} title={item.brand}>{`${item.brand} (${item.count})`}</option>
               ))}
-          </SelectInput>
-          <SelectInput
-            value={filterByTypeKeyword}
-            onChange={e => {
-              if (e.target.value !== "select") {
-              }
-              filterProductsByType(e.target.value);
-            }}
-            title="Select product type"
-          >
-            <option value="select" title="Select product type">Select product type</option>
-            {getUniqueProducts(productListCopy, "type").map(item => (
-              <option key={item.id} value={item.type} title={item.type}>{`${item.type} (${item.count})`}</option>
-            ))}
           </SelectInput>
           <SelectInputLabel>Sort by:</SelectInputLabel>
           <SelectInput
@@ -101,8 +106,8 @@ const Home = () => {
               title="Sort"
             >
               <option value="most-popular" title="Sort by most popular">Most popular</option>
-              <option value="a-z" title="Sort by brand A-Z">Brand A-Z</option>
-              <option value="z-a" title="Sort by brand A-Z">Brand Z-A</option>
+              <option value="a-z" title="Sort by name A-Z">Name A-Z</option>
+              <option value="z-a" title="Sort by name A-Z">Name Z-A</option>
               <option value="lowest-price" title="Sort by lowest price">Lowest price</option>
               <option value="highest-price" title="Sort by highest price">Highest price</option>
             </SelectInput>

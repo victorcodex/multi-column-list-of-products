@@ -1,7 +1,7 @@
-import productlist from '../resources/productlist';
+import productlist from '../../resources/productlist';
 
 // simulating server loading with promise and setTimeout
-const loadProducts = () => {
+const productService = () => {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(productlist);
@@ -9,4 +9,4 @@ const loadProducts = () => {
     });
   }
 
-export default loadProducts;
+export default productService;

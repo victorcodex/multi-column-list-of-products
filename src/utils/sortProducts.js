@@ -1,5 +1,5 @@
 // sort products by brand in ascending or descending order 
-const sortProducts = (products, keyName = "brand", sortType) => {
+const sortProducts = (products, keyName = "name", sortType) => {
     const productsCopy = [...products];
     // most popular
     if (sortType === "most-popular") {

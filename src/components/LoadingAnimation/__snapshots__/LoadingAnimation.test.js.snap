@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingAnimation should render loading animation 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gtsrHT dNCuZL"
+  />
+</DocumentFragment>
+`;
